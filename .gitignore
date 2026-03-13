@@ -35,6 +35,7 @@ target/
 # Mac system files
 .DS_Store
 
+
 # Environment/secrets
 *.env
 .env
