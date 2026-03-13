@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  firewall-api:
+    build: .
+    container_name: firewall-rule-api
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+    restart: unless-stopped
+
+# Note: We're using H2 in-memory database for simplicity.
+# For production you would add a PostgreSQL service here and
+# update application.properties to point to it.
